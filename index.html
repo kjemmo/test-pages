@@ -3,11 +3,14 @@
 	<title>Test form</title>
 </head>	
 <body>
-	<p>Test form</p>
+	<h3>Test form</h3>
 	<form>
-		
+		<button type="reset">Clear form</button>
+		<br>
+		<br>
+		<!-- Date of birth -->		
 		<fieldset>
-			<legend>..:: Date of birth ::..</legend>
+			<legend>Date of birth</legend>
 			<label>Birthday</label>
 			<select id="birth-day">
 				<option value="" disabled="">Day</option>
@@ -61,6 +64,23 @@
 				<option value="12">12</option>
 			</select>
 			<br>
+			<label>Month with numbers 01 - 12</label>
+			<select id="birth-month">
+				<option value="" disabled="">Month</option>
+				<option value="01">1</option>
+				<option value="02">2</option>
+				<option value="03">3</option>
+				<option value="04">4</option>
+				<option value="05">5</option>
+				<option value="06">6</option>
+				<option value="07">7</option>
+				<option value="08">8</option>
+				<option value="09">9</option>
+				<option value="10">10</option>
+				<option value="11">11</option>
+				<option value="12">12</option>
+			</select>
+			<br>
 			<label>Month with letters jan - dec</label>
 			<select id="birth-month">
 				<option value="" disabled="">Month</option>
@@ -78,25 +98,66 @@
 				<option value="dec">12</option>
 			</select>
 		</fieldset>
+		<br>
 
+		<!-- Account details -->
 		<fieldset>
-			<legend>..:: Account details ::..</legend>
+			<legend>Account details</legend>
 
 			<label>Username</label>
 			<input type="text" id="userName">
+			<br>
 			<label>Email</label>
 			<input type="email">
+			<br>
 			<label>Password</label>
 			<input type="password">
 		</fieldset>
+		<br>
 
+		<!-- Name -->
 		<fieldset>
-			<legend>..:: Name ::..</legend>
+			<legend>Name</legend>
 			<label>First name</label>
 			<input type="text" name="firstName">
-			<label>Llast name"</label>
+			<br>
+			<label>Last name</label>
 			<input type="text" placeholder="Last name">
+			<br>
+			<label>Full name</label>
+			<input type="text" placeholder="Full name">
 		</fieldset>
+		<br>
+
+		<!-- Gender -->
+		<fieldset>
+			<legend>Gender</legend>
+			<label>Select male/female</label>
+			<select id="gender">
+				<option disabled selected>Please select</option>
+				<option value="male">Male</option>
+				<option value="female">Female</option>
+				<option value="other">Other</option>
+			</select>
+			<br>
+			<label>Select m/f</label>
+			<select id="sex">
+				<option disabled selected>Please select</option>
+				<option value="m">Male</option>
+				<option value="f">Female</option>
+				<option value="o">Other</option>
+			</select>
+			<br>
+			<p>Radio male/female</p>
+			<input type="radio" id="male" name="gender" value="male">
+			<label for="male">Male</label><br>
+			<input type="radio" id="female" name="gender" value="female">
+			<label for="female">Female</label><br>
+			<input type="radio" id="other" name="gender" value="other">
+			<label for="other">Other</label>
+		</fieldset>
+
+
 
 
 
@@ -159,6 +220,7 @@
 </body>
 </html>
 
+<!-- -->
 <fieldset>
 	<legend></legend>
 </fieldset>
