@@ -1,6 +1,12 @@
 <html>
 <head>	
 	<title>Test form</title>
+	<style>
+		body {padding: 20px;}
+		fieldset {border: 1px solid #aaa;padding: 15px;border-radius: 5px;margin-bottom: 20px;}
+		button,input,select {margin: 5px;}
+		legend {color: #454545;	font-weight: bold;}
+	</style>
 </head>	
 <body>
 	<h3>Test form</h3>
@@ -10,7 +16,7 @@
 		<br>
 		<!-- Date of birth -->		
 		<fieldset>
-			<legend>Date of birth</legend>
+			<legend>Date of birth with numbers 1 - 31</legend>
 			<label>Birthday</label>
 			<select id="birth-day">
 				<option value="" disabled="">Day</option>
@@ -100,9 +106,11 @@
 			<br>
 			<label>As input type date</label>
 			<input id="date-of-birth" type="date" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
+			<br>
+			<label>As input type text</label>
+			<input id="date-of-birth" type="text" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
 		</fieldset>
-		<br>
-
+		
 		<!-- Account details -->
 		<fieldset>
 			<legend>Account details</legend>
@@ -116,8 +124,7 @@
 			<label>Password</label>
 			<input type="password">
 		</fieldset>
-		<br>
-
+		
 		<!-- Name -->
 		<fieldset>
 			<legend>Name</legend>
@@ -130,7 +137,7 @@
 			<label>Full name</label>
 			<input type="text" placeholder="Full name">
 		</fieldset>
-		<br>
+		
 
 		<!-- Gender -->
 		<fieldset>
@@ -158,72 +165,67 @@
 			<label for="female">Female</label><br>
 			<input type="radio" id="other" name="gender" value="other">
 			<label for="other">Other</label>
+			<br>
+			<div>Gender from Facebook signup</div>
+
+			<span data-type="radio" data-name="gender_wrapper">
+				<span>
+					<input type="radio" name="sex" value="" id="u_0_9">
+					<label for="u_0_9">Female</label>
+				</span>
+				<span>
+					<input type="radio" name="sex" value="" id="u_0_a">
+					<label for="u_0_a">Male</label>
+				</span>
+				<span>
+					<input type="radio" name="sex" value="" id="u_0_b">
+					<label for="u_0_b">Custom</label>
+				</span>
+			</span>
 		</fieldset>
 
+		<!--Terms and newsletter -->
+		<fieldset>
+			<legend>Terms and newsletter</legend>
+			<input type="checkbox" name="terms" value="accept"> I accept terms and conditions<br>
+			<input type="checkbox" name="newsletter" value="accept" checked=""> Receive newsletter<br>
+			<br>
+		</fieldset>
 
-
-
-
-
-
+		<!-- Checkboxes -->
+		<fieldset>
+			<legend>Various form elements</legend>
+			<label>Select</label>
+			<br>
+			<select>
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</select> 
+			<br><br>	
+			<label>Checkbox</label>
+			<br>
+			<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+			<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+			<input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br> 
+			<br>
+			<label>Radio</label>
+			<br>
+			<input type="radio" name="color" value="blue"> Blue<br>
+			<input type="radio" name="color" value="yellow"> Yellow<br>
+			<input type="radio" name="color" value="red" checked> Red
+		</fieldset>
+		
 		<input type="submit" value="Submit">
-		<br>
-		<label>
-			Select
-		</label>
-		<select>
-			<option value="volvo">Volvo</option>
-			<option value="saab">Saab</option>
-			<option value="mercedes">Mercedes</option>
-			<option value="audi">Audi</option>
-		</select> 
-		<br>
-		<label>
-			Gender
-		</label>
-		<select>
-			<option value="">Select</option>
-			<option value="male">Male</option>
-			<option value="femail">Female</option>
-		</select> 
-		<br>
-		<label>
-			Checkbox
-		</label>
-		<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
-		<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
-		<input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br> 
-		<br>
-		<label>
-			Radio
-		</label>
-		<input type="radio" name="gender" value="male"> Male<br>
-		<input type="radio" name="gender" value="female"> Female<br>
-		<input type="radio" name="gender" value="other"> Other 
-		<br>
-		<select id="day">
-			<option value="01">1</option>
-			<option value="02">2</option>
-			<option value="03">3</option>
-			<option value="04">4</option>
-			<option value="05">5</option>
-		</select> 
-		<select id="birth-month">
-			<option value="1">jan</option>
-			<option value="2">feb</option>
-			<option value="3">mar</option>
-			<option value="3">apr</option>
-			<option value="3">may</option>
-		</select>
-		<br>
-		<input type="checkbox" name="terms" value="accept"> I accept terms and conditions<br>
-		<br>
-
 	</form>
 </body>
 </html>
+
+
 
 <!-- -->
 <fieldset>
 	<legend></legend>
 </fieldset>
+
