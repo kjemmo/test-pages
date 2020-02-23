@@ -6,217 +6,231 @@
 		fieldset {border: 1px solid #aaa;padding: 15px;border-radius: 5px;margin-bottom: 20px;}
 		button,input,select {margin: 5px;}
 		legend {color: #454545;	font-weight: bold;}
+		.column {width: 350px; float:left;padding: 10px;}
+		.row:after {content:"";display: table;clear: both;}
 	</style>
 </head>	
 <body>
+
 	<h3>Test form</h3>
 	<form>
 		<button type="reset">Clear form</button>
-		<br>
-		<br>
-		<!-- Date of birth -->		
-		<fieldset>
-			<legend>Date of birth</legend>
-			<label>Birthday</label>
-			<select id="birth-day">
-				<option value="" disabled="">Day</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-				<option value="13">13</option>
-				<option value="14">14</option>
-				<option value="15">15</option>
-				<option value="16">16</option>
-				<option value="17">17</option>
-				<option value="18">18</option>
-				<option value="19">19</option>
-				<option value="20">20</option>
-				<option value="21">21</option>
-				<option value="22">22</option>
-				<option value="23">23</option>
-				<option value="24">24</option>
-				<option value="25">25</option>
-				<option value="26">26</option>
-				<option value="27">27</option>
-				<option value="28">28</option>
-				<option value="29">29</option>
-				<option value="30">30</option>
-				<option value="31">31</option>
-			</select>
-			<br>
-			<label>Month with numbers 1 - 12</label>
-			<select id="birth-month">
-				<option value="" disabled="">Month</option>
-				<option value="1">1</option>
-				<option value="2">2</option>
-				<option value="3">3</option>
-				<option value="4">4</option>
-				<option value="5">5</option>
-				<option value="6">6</option>
-				<option value="7">7</option>
-				<option value="8">8</option>
-				<option value="9">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
-			<br>
-			<label>Month with numbers 01 - 12</label>
-			<select id="birth-month">
-				<option value="" disabled="">Month</option>
-				<option value="01">1</option>
-				<option value="02">2</option>
-				<option value="03">3</option>
-				<option value="04">4</option>
-				<option value="05">5</option>
-				<option value="06">6</option>
-				<option value="07">7</option>
-				<option value="08">8</option>
-				<option value="09">9</option>
-				<option value="10">10</option>
-				<option value="11">11</option>
-				<option value="12">12</option>
-			</select>
-			<br>
-			<label>Month with letters jan - dec</label>
-			<select id="birth-month">
-				<option value="" disabled="">Month</option>
-				<option value="jan">1</option>
-				<option value="feb">2</option>
-				<option value="mar">3</option>
-				<option value="apr">4</option>
-				<option value="may">5</option>
-				<option value="jun">6</option>
-				<option value="jul">7</option>
-				<option value="aug">8</option>
-				<option value="sep">9</option>
-				<option value="oct">10</option>
-				<option value="nov">11</option>
-				<option value="dec">12</option>
-			</select>
-			<br>
-			<label>As input type date</label>
-			<input id="date-of-birth" type="date" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
-			<br>
-			<label>As input type text</label>
-			<input id="date-of-birth" type="text" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
-		</fieldset>
-		
-		<!-- Account details -->
-		<fieldset>
-			<legend>Account details</legend>
+		<div class="row">
+			<div class="column">
 
-			<label>Username</label>
-			<input type="text" id="userName">
-			<br>
-			<label>Email</label>
-			<input type="email">
-			<br>
-			<label>Password</label>
-			<input type="password">
-		</fieldset>
-		
-		<!-- Name -->
-		<fieldset>
-			<legend>Name</legend>
-			<label>First name</label>
-			<input type="text" name="firstName">
-			<br>
-			<label>Last name</label>
-			<input type="text" placeholder="Last name">
-			<br>
-			<label>Full name</label>
-			<input type="text" placeholder="Full name">
-		</fieldset>
-		
+				<!-- Account details -->
+				<fieldset>
+					<legend>Account details</legend>
+					<label>Username</label>
+					<input type="text" id="userName">
+					<br>
+					<label>Email</label>
+					<input type="email">
+					<br>
+					<label>Password</label>
+					<input type="password">
+				</fieldset>
 
-		<!-- Gender -->
-		<fieldset>
-			<legend>Gender</legend>
-			<label>Select male/female</label>
-			<select id="gender">
-				<option disabled selected>Please select</option>
-				<option value="male">Male</option>
-				<option value="female">Female</option>
-				<option value="other">Other</option>
-			</select>
-			<br>
-			<label>Select m/f</label>
-			<select id="sex">
-				<option disabled selected>Please select</option>
-				<option value="m">Male</option>
-				<option value="f">Female</option>
-				<option value="o">Other</option>
-			</select>
-			<br>
-			<p>Radio male/female</p>
-			<input type="radio" id="male" name="gender" value="male">
-			<label for="male">Male</label><br>
-			<input type="radio" id="female" name="gender" value="female">
-			<label for="female">Female</label><br>
-			<input type="radio" id="other" name="gender" value="other">
-			<label for="other">Other</label>
-			<br>
-			<div>Gender from Facebook signup</div>
+				<!-- Name -->
+				<fieldset>
+					<legend>Name</legend>
+					<label>First name</label>
+					<input type="text" name="firstName">
+					<br>
+					<label>Last name</label>
+					<input type="text" placeholder="Last name">
+					<br>
+					<label>Full name</label>
+					<input type="text" placeholder="Full name">
+				</fieldset>
 
-			<span data-type="radio" data-name="gender_wrapper">
-				<span>
-					<input type="radio" name="sex" value="" id="u_0_9">
-					<label for="u_0_9">Female</label>
-				</span>
-				<span>
-					<input type="radio" name="sex" value="" id="u_0_a">
-					<label for="u_0_a">Male</label>
-				</span>
-				<span>
-					<input type="radio" name="sex" value="" id="u_0_b">
-					<label for="u_0_b">Custom</label>
-				</span>
-			</span>
-		</fieldset>
+				<!--Terms and newsletter -->
+				<fieldset>
+					<legend>Terms and newsletter</legend>
+					<input type="checkbox" name="terms" value="accept"> I accept terms and conditions<br>
+					<input type="checkbox" name="newsletter" value="accept" checked=""> Receive newsletter<br>
+					<br>
+				</fieldset>
+			</div>
+			<div class="column">
 
-		<!--Terms and newsletter -->
-		<fieldset>
-			<legend>Terms and newsletter</legend>
-			<input type="checkbox" name="terms" value="accept"> I accept terms and conditions<br>
-			<input type="checkbox" name="newsletter" value="accept" checked=""> Receive newsletter<br>
-			<br>
-		</fieldset>
+				<!-- Gender -->
+				<fieldset>
+					<legend>Gender</legend>
+					<label>Select male/female</label>
+					<select id="gender">
+						<option disabled selected>Please select</option>
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+						<option value="other">Other</option>
+					</select>
+					<br>
+					<label>Select m/f</label>
+					<select id="sex">
+						<option disabled selected>Please select</option>
+						<option value="m">Male</option>
+						<option value="f">Female</option>
+						<option value="o">Other</option>
+					</select>
+					<br>
+					<p>Radio male/female</p>
+					<input type="radio" id="male" name="gender" value="male">
+					<label for="male">Male</label><br>
+					<input type="radio" id="female" name="gender" value="female">
+					<label for="female">Female</label><br>
+					<input type="radio" id="other" name="gender" value="other">
+					<label for="other">Other</label>
+					<br>
+					<div>Gender from Facebook signup</div>
 
-		<!-- Checkboxes -->
-		<fieldset>
-			<legend>Various form elements</legend>
-			<label>Select</label>
-			<br>
-			<select>
-				<option value="volvo">Volvo</option>
-				<option value="saab">Saab</option>
-				<option value="mercedes">Mercedes</option>
-				<option value="audi">Audi</option>
-			</select> 
-			<br><br>	
-			<label>Checkbox</label>
-			<br>
-			<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
-			<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
-			<input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br> 
-			<br>
-			<label>Radio</label>
-			<br>
-			<input type="radio" name="color" value="blue"> Blue<br>
-			<input type="radio" name="color" value="yellow"> Yellow<br>
-			<input type="radio" name="color" value="red" checked> Red
-		</fieldset>
-		
+					<span data-type="radio" data-name="gender_wrapper">
+						<span>
+							<input type="radio" name="sex" value="" id="u_0_9">
+							<label for="u_0_9">Female</label>
+						</span>
+						<span>
+							<input type="radio" name="sex" value="" id="u_0_a">
+							<label for="u_0_a">Male</label>
+						</span>
+						<span>
+							<input type="radio" name="sex" value="" id="u_0_b">
+							<label for="u_0_b">Custom</label>
+						</span>
+					</span>
+				</fieldset> 
+
+				<!-- Date of birth -->
+				<fieldset>
+					<legend>Date of birth</legend>
+					<label>Birthday</label>
+					<select id="birth-day">
+						<option value="" disabled="">Day</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+						<option value="21">21</option>
+						<option value="22">22</option>
+						<option value="23">23</option>
+						<option value="24">24</option>
+						<option value="25">25</option>
+						<option value="26">26</option>
+						<option value="27">27</option>
+						<option value="28">28</option>
+						<option value="29">29</option>
+						<option value="30">30</option>
+						<option value="31">31</option>
+					</select>
+					<br>
+					<label>Month with numbers 1 - 12</label>
+					<select id="birth-month">
+						<option value="" disabled="">Month</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+					<br>
+					<label>Month with numbers 01 - 12</label>
+					<select id="birth-month">
+						<option value="" disabled="">Month</option>
+						<option value="01">1</option>
+						<option value="02">2</option>
+						<option value="03">3</option>
+						<option value="04">4</option>
+						<option value="05">5</option>
+						<option value="06">6</option>
+						<option value="07">7</option>
+						<option value="08">8</option>
+						<option value="09">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+					<br>
+					<label>Month with letters jan - dec</label>
+					<select id="birth-month">
+						<option value="" disabled="">Month</option>
+						<option value="jan">1</option>
+						<option value="feb">2</option>
+						<option value="mar">3</option>
+						<option value="apr">4</option>
+						<option value="may">5</option>
+						<option value="jun">6</option>
+						<option value="jul">7</option>
+						<option value="aug">8</option>
+						<option value="sep">9</option>
+						<option value="oct">10</option>
+						<option value="nov">11</option>
+						<option value="dec">12</option>
+					</select>
+					<br>
+					<label>As input type date</label>
+					<input id="date-of-birth" type="date" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
+					<br>
+					<label>As input type text</label>
+					<input id="date-of-birth" type="text" min="1900-01-01" max="2020-02-23" name="dateOfBirth" placeholder="dd/mm/yyyy">
+				</fieldset>
+			</div>
+
+			<div class="column">
+
+				<!-- Various form elements -->
+				<fieldset>
+					<legend>Various form elements</legend>
+				
+				<!-- Select -->
+					<label>Select</label>
+					<br>
+					<select>
+						<option value="volvo">Volvo</option>
+						<option value="saab">Saab</option>
+						<option value="mercedes">Mercedes</option>
+						<option value="audi">Audi</option>
+					</select> 
+					<br><br>	
+				
+				<!-- Checkboxes -->
+					<label>Checkbox</label>
+					<br>
+					<input type="checkbox" name="vehicle1" value="Bike"> I have a bike<br>
+					<input type="checkbox" name="vehicle2" value="Car"> I have a car<br>
+					<input type="checkbox" name="vehicle3" value="Boat" checked> I have a boat<br> 
+					<br>
+				
+				<!-- Radios -->
+					<label>Radio</label>
+					<br>
+					<input type="radio" name="color" value="blue"> Blue<br>
+					<input type="radio" name="color" value="yellow"> Yellow<br>
+					<input type="radio" name="color" value="red" checked> Red
+				</fieldset>
+			</div>
+		</div> 
 		<input type="submit" value="Submit">
 	</form>
 </body>
@@ -224,8 +238,8 @@
 
 
 
-<!-- -->
+<!-- 
 <fieldset>
 	<legend></legend>
 </fieldset>
-
+-->
