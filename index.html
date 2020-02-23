@@ -229,6 +229,16 @@
 					<input type="radio" name="color" value="yellow"> Yellow<br>
 					<input type="radio" name="color" value="red" checked> Red
 				</fieldset>
+								<!-- identical selector (ID) -->
+				<fieldset>
+					<legend>Account details</legend>
+					<small class="red">Inputs with same selector can not fire the wizard?</small>
+					<label>Username 1</label>
+					<input type="text" id="userName">
+					<br>
+					<label>Username 2</label>
+					<input type="text" id="userName">
+				</fieldset>
 			</div>
 		</div> 
 		<input type="submit" value="Submit">
