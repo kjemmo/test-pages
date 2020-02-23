@@ -5,9 +5,9 @@
 <body>
 	<p>Test form</p>
 	<form>
+		
 		<fieldset>
-			<legend>Date of birth</legend>
-			
+			<legend>..:: Date of birth ::..</legend>
 			<label>Birthday</label>
 			<select id="birth-day">
 				<option value="" disabled="">Day</option>
@@ -44,9 +44,9 @@
 				<option value="31">31</option>
 			</select>
 			<br>
-			<label>Birth month</label>
+			<label>Month with numbers 1 - 12</label>
 			<select id="birth-month">
-				<option value="" disabled="">Month with numbers 1 - 12</option>
+				<option value="" disabled="">Month</option>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -60,8 +60,10 @@
 				<option value="11">11</option>
 				<option value="12">12</option>
 			</select>
+			<br>
+			<label>Month with letters jan - dec</label>
 			<select id="birth-month">
-				<option value="" disabled="">Month with letters jan - dec</option>
+				<option value="" disabled="">Month</option>
 				<option value="jan">1</option>
 				<option value="feb">2</option>
 				<option value="mar">3</option>
@@ -77,63 +79,29 @@
 			</select>
 		</fieldset>
 
+		<fieldset>
+			<legend>..:: Account details ::..</legend>
 
-		<br><br>
-		<label>
-			id="username"
-		</label>
-		<input type="text" id="username">
-		<br><br>
-		<label>
-			id="USERNAME"
-		</label>
-		<input type="text" id="USERNAME">
-		<br><br>
-		<label>
-			name="lastName"
-		</label>
-		<input type="text" name="lastName">
-		<br><br>
-		<label>
-			data-test="username"
-		</label>
-		<input type="text" data-test="username">
-		<br><br>
-		<label>
-			data-testid="username"
-		</label>
-		<input type="text" data-testid="username">
-		<br><br>
-		<label>
-			type="email"
-		</label>
-		<input type="email">
-		<br><br>
-		<label>
-			type="password"
-		</label>
-		<input type="password">
-		<br><br>
-		<label>
-			placeholder="username"
-		</label>
-		<input placeholder="username">
-		<br><br>
-		<label>
-			Username
-		</label>
-		<input type="text" name="username">
-		<br>
-		<label>
-			Password
-		</label>
-		<input type="Password" id="password">
-		<br>
-		<label>
-			Email
-		</label>
-		<input type="email" id="email">
-		<br>
+			<label>Username</label>
+			<input type="text" id="userName">
+			<label>Email</label>
+			<input type="email">
+			<label>Password</label>
+			<input type="password">
+		</fieldset>
+
+		<fieldset>
+			<legend>..:: Name ::..</legend>
+			<label>First name</label>
+			<input type="text" name="firstName">
+			<label>Llast name"</label>
+			<input type="text" placeholder="Last name">
+		</fieldset>
+
+
+
+
+
 		<input type="submit" value="Submit">
 		<br>
 		<label>
@@ -191,3 +159,6 @@
 </body>
 </html>
 
+<fieldset>
+	<legend></legend>
+</fieldset>
