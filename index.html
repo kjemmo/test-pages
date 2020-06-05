@@ -9,6 +9,12 @@
 		.column {width: 305px; float:left;padding: 5px;}
 		.row:after {content:"";display: table;clear: both;}
 	</style>
+	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	    <script>
+      tinymce.init({
+        selector: '#article_tinymce'
+      });
+    </script>
 </head>	
 <body>
 
@@ -852,6 +858,21 @@
 				</fieldset>
 			</div>
 		</div> 
+		<div class="row">
+			<label>Article title</label>
+			<br>
+			<input type="text" name="article_title">
+			<br>
+			<label>Article textarea</label>
+			<br>
+			<textarea name="articel_text" id="article_text"></textarea>
+			<br>
+			<label>Article RTE</label>
+			<br>
+			<form method="post">
+			<textarea name="articel_text" id="article_tinymce"></textarea>
+		</form>
+		</div>
 		<input type="submit" value="Submit">
 	</form>
 </body>
