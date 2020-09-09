@@ -10,11 +10,11 @@
 		.row:after {content:"";display: table;clear: both;}
 	</style>
 	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-	    <script>
-      tinymce.init({
-        selector: '#article_tinymce'
-      });
-    </script>
+	<script>
+		tinymce.init({
+			selector: 'textarea#mytextarea'
+		});
+	</script>
 </head>	
 <body>
 
@@ -28,7 +28,7 @@
 				<fieldset>
 					<legend>Account details</legend>
 					<label>Username</label>
-					<input type="text" id="84611-434866-43644-25734" placeholder="username" name="user">
+					<input type="text" id="r84611-434866-43644-25734" placeholder="username" name="user">
 					<br>
 					<label>Email</label>
 					<input type="email">
@@ -636,6 +636,14 @@
 					<label>Phone</label>
 					<input type="tel" id="phone">
 				</fieldset>
+				<fieldset>
+					<legend>Security q/a</legend>
+					<label>Security question</label>
+					<input type="text" id="securit_question">
+					<br>
+					<label>Security answer</label>
+					<input type="text" id="securit_answer">
+				</fieldset>
 
 
 
@@ -810,9 +818,69 @@
 					<label>Age</label>
 					<input type="text" name="age" size="10">
 				</fieldset>
+				<fieldset>
+					<legend>Blog/site info</legend>
+					<label>Blog title</label>
+					<br>
+					<input type="text" id="blog_title">
+					<br>
+					<label>Blog description</label>
+					<br>
+					<input type="text" id="blog_description">
+				</fieldset>
 			</div>
 
 			<div class="column">
+				<fieldset>
+					<legend>Bio and links</legend>
+					<label>Biography title</label>
+					<br>
+					<input type="text" id="bio_title">
+					<label>Biography</label>
+					<br>
+					<textarea id="bio"></textarea>
+					<br>
+					<label>Company</label>
+					<br>
+					<input type="text" id="company">
+					<br>
+					<label>Link 1 url</label>
+					<br>
+					<input type="text" id="url1">
+					<br>
+					<label>Link 1 anchor</label>
+					<br>
+					<input type="text" id="anchor1">
+					<br>
+					<label>Link 1 HTML format</label>
+					<br>
+					<input type="text" id="html_format1">
+					<br>
+					<label>Link 2 url</label>
+					<br>
+					<input type="text" id="url2">
+					<br>
+					<label>Link 2 anchor</label>
+					<br>
+					<input type="text" id="anchor2">
+					<br>
+					<label>Link 2 HTML format</label>
+					<br>
+					<input type="text" id="html_format2">	
+					<br>
+					<label>Link 3 url</label>
+					<br>
+					<input type="text" id="url3">
+					<br>
+					<label>Link 3 anchor</label>
+					<br>
+					<input type="text" id="anchor3">
+					<br>
+					<label>Link 3 HTML format</label>
+					<br>
+					<input type="text" id="html_format3">																					
+
+				</fieldset>
 
 				<!-- Various form elements -->
 				<fieldset>
@@ -858,23 +926,24 @@
 				</fieldset>
 			</div>
 		</div> 
-		<div class="row">
-			<label>Article title</label>
-			<br>
-			<input type="text" name="article_title">
-			<br>
-			<label>Article textarea</label>
-			<br>
-			<textarea name="articel_text" id="article_text"></textarea>
-			<br>
-			<label>Article RTE</label>
-			<br>
-			<form method="post">
-			<textarea name="articel_text" id="article_tinymce"></textarea>
-		</form>
-		</div>
+
 		<input type="submit" value="Submit">
 	</form>
+	<div class="row">
+		<label>Article title</label>
+		<br>
+		<input type="text" name="article_title">
+		<br>
+		<label>Article textarea</label>
+		<br>
+		<textarea name="articel_text" id="article_text"></textarea>
+		<br>
+		<label>Article RTE</label>
+		<br>
+
+		<textarea name="articel_text" id="mytextarea">Hep</textarea>
+
+	</div>
 </body>
 </html>
 
